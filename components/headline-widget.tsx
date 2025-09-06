@@ -397,14 +397,6 @@ export function HeadlineWidget() {
           </div>
 
           <div className="flex gap-2 mt-4">
-            <Button onClick={exportSettings} variant="outline" size="sm">
-              <Download className="h-4 w-4 mr-2" />
-              Export JSON
-            </Button>
-            <Button onClick={copyCSS} variant="outline" size="sm">
-              <Copy className="h-4 w-4 mr-2" />
-              Copy CSS
-            </Button>
             <Button onClick={resetSettings} variant="outline" size="sm">
               <RefreshCw className="h-4 w-4 mr-2" />
               Reset

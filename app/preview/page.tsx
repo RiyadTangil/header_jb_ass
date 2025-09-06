@@ -16,6 +16,7 @@ interface HeadlineSettings {
   lineHeight: number
   letterSpacing: number
   textAlign: "left" | "center" | "right"
+  textColor: string
   useGradient: boolean
   gradientDirection: "to-r" | "to-l" | "to-b" | "to-t" | "to-br" | "to-bl"
   gradientColors: string[]
@@ -52,6 +53,7 @@ export default function PreviewPage() {
         lineHeight: 1.2,
         letterSpacing: 0,
         textAlign: "center",
+        textColor: "#000000",
         useGradient: false,
         gradientDirection: "to-r",
         gradientColors: ["#000000", "#333333"],
@@ -85,7 +87,7 @@ export default function PreviewPage() {
       padding: settings.useBackground ? `${settings.padding}px` : 0,
       borderRadius: settings.useBackground ? `${settings.borderRadius}px` : 0,
       backgroundColor: settings.useBackground ? settings.backgroundColor : "transparent",
-      color: settings.useGradient ? "transparent" : "#000000", // Default to black text
+      color: settings.useGradient ? "transparent" : settings.textColor, // Use the selected text color
     }
 
     if (settings.useGradient) {
